@@ -1,6 +1,7 @@
 {
     "name": "react-template",
     "version": "0.1.0",
+    "homepage": "https://denis6421.github.io/test-env/",
     "private": true,
     "dependencies": {
         "@emotion/react": "^11.7.1",
