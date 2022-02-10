@@ -29,9 +29,11 @@ const App: Component = () => {
                         Connect
                     </button>
                 )}
-                <button type="button" onClick={disconnect}>
-                    Disconnect
-                </button>
+                {address && (
+                    <button type="button" onClick={disconnect}>
+                        Disconnect
+                    </button>
+                )}
             </div>
         </div>
     );
