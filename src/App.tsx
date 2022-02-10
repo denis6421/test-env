@@ -1,5 +1,4 @@
 import React, { FunctionComponent as Component } from 'react';
-import './App.scss';
 import { useDispatch } from 'react-redux';
 import useWallet from './hooks/useWallet';
 import Navbar from './components/Navbar';
