@@ -1,6 +1,5 @@
 /* eslint-disable consistent-return */
 import Web3 from 'web3';
-import { INFURA_ID } from '../../config/web3';
 
 class Web3Service {
     web3: Web3 | undefined;
@@ -12,8 +11,8 @@ class Web3Service {
             if ((window as any).ethereum) {
                 this.web3 = new Web3((window as any).ethereum);
                 this.provider = (window as any).ethereum;
-            } else if (INFURA_ID) {
-                const infuraProvider = new Web3.providers.HttpProvider(INFURA_ID);
+            } else if (process.env.REACT_APP_INFURA_ID) {
+                const infuraProvider = new Web3.providers.HttpProvider(process.env.REACT_APP_INFURA_ID);
                 this.web3 = new Web3(infuraProvider);
                 this.provider = infuraProvider;
             }
