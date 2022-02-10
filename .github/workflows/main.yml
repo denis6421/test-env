@@ -18,6 +18,9 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
+        env:  
+         REACT_APP_INFURA_ID: ${{secrets.REACT_APP_INFURA_ID}}
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
